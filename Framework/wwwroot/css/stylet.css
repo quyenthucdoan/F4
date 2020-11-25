@@ -1,0 +1,47 @@
+﻿
+.navigation-bar {
+    padding: 0;
+    margin: 0;
+    background-color: #ABBEAB;
+}
+
+.navbar-expand-md {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    padding: 0px;
+    margin: 0px;
+}
+
+.bar li a {
+    background-color: #C6CCC3;
+    border: 1px solid #A18572;
+    border-radius: 25px;
+    box-sizing: border-box;
+}
+
+.bar + div a {
+    background-color: #DD92BC;
+    border: 1px solid #A18572;
+    border-radius: 25px;
+    box-sizing: border-box;
+}
+
+.welcome-section {
+    background-image: url("/Content/Content/images/101868554_265752884696719_7834793406995539855_n.jpg");
+}
+
+.carousel-caption {
+    position: absolute;
+    top: 35%;
+    right: 80%;
+    min-width: 100vh;
+}
+
+    .carousel-caption h1 {
+        font-size: 70px;
+        font-weight: 600;
+        font-family: 'Cormorant', serif;
+    }
