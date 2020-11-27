@@ -12,12 +12,12 @@ namespace Framework.Models
         [Key]
         public int ADMIN_ID { get; set; }
 
-        [Required]
+        [Required(AllowEmptyStrings = false, ErrorMessage = "Username required")]
         [MaxLength(100)]
         [Column(TypeName ="VARCHAR")]
         public string USERNAME { get; set; }
 
-        [Required]
+        [Required(AllowEmptyStrings =false, ErrorMessage ="Password required")]
         [MaxLength(100)]
         [DataType(DataType.Password)]
         public string PASSWD { get; set; }
