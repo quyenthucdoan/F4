@@ -18,12 +18,9 @@ body {
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    /* mix-blend-mode: multiply; */
+     mix-blend-mode: multiply; 
 }
 
-.row {
-    justify-content: center;
-}
 
 .form-group {
     flex-direction: row;
