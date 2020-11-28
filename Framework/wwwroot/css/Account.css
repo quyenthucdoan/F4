@@ -1,0 +1,46 @@
+﻿.form-container {
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px 0px #000;
+    background: #F7F8F1;
+    width:600px;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    background: url("/Content/Content/images/photo-1508367554139-4c20f8c94971.jpg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    /* mix-blend-mode: multiply; */
+}
+
+.row {
+    justify-content: center;
+}
+
+.form-group {
+    flex-direction: row;
+}
+
+    .form-group label {
+        font-family: 'Dancing Script', cursive;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 36px;
+        line-height: 54px;
+        color: #398F53;
+    }
+
+.btn {
+    background-color: #295637;
+    color: white;
+}
+
+
