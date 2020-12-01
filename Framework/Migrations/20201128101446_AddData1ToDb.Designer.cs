@@ -4,14 +4,16 @@ using Framework.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace Framework.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20201128101446_AddData1ToDb")]
+    partial class AddData1ToDb
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -26,6 +28,11 @@ namespace Framework.Migrations
                         .HasColumnType("int")
                         .UseIdentityColumn();
 
+                    b.Property<int>("MARK")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasDefaultValue(1);
+
                     b.Property<string>("PASSWD")
                         .IsRequired()
                         .HasMaxLength(100)
@@ -33,7 +40,8 @@ namespace Framework.Migrations
 
                     b.Property<string>("USERNAME")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(100)
+                        .HasColumnType("VARCHAR(100)");
 
                     b.HasKey("ADMIN_ID");
 
@@ -43,14 +51,9 @@ namespace Framework.Migrations
                         new
                         {
                             ADMIN_ID = 7,
+                            MARK = 0,
                             PASSWD = "123",
                             USERNAME = "ducanhdeptraivodichvutru"
-                        },
-                        new
-                        {
-                            ADMIN_ID = 8,
-                            PASSWD = "123456!",
-                            USERNAME = "ducanh@gmail.com"
                         });
                 });
 

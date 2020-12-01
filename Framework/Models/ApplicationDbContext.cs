@@ -13,10 +13,10 @@ namespace Framework.Models
 
         }
 
-        DbSet<Account> Accounts { get; set; }
-        DbSet<Category> Categories { get; set; }
-        DbSet<Menu> Menus { get; set; }
-        DbSet<Orders> Oders { get; set; }
+        public DbSet<Account> Accounts { get; set; }
+        public DbSet<Category> Categories { get; set; }
+        public DbSet<Menu> Menus { get; set; }
+        public DbSet<Orders> Oders { get; set; }
         DbSet<Order_Detail> Order_Details { get; set; }
 
         DbSet<Discount_Code> Discounts { get; set; }
@@ -30,7 +30,7 @@ namespace Framework.Models
             
             modelBuilder.Entity<Order_Detail>().Property(u => u.AMOUNT).HasDefaultValue(1);
             modelBuilder.Entity<Order_Detail>().Property(u => u.CODE_ID).HasDefaultValue("null");
-            modelBuilder.Entity<Account>().Property(u => u.MARK).HasDefaultValue(1);
+           // modelBuilder.Entity<Account>().Property(u => u.MARK).HasDefaultValue(1);
             modelBuilder.Entity<Category>().Property(u => u.MARK).HasDefaultValue(1);
             modelBuilder.Entity<Menu>().Property(u => u.MARK).HasDefaultValue(1);
             modelBuilder.Entity<Discount_Code>().Property(u => u.MARK).HasDefaultValue(1);
@@ -41,6 +41,7 @@ namespace Framework.Models
 
             //Data Seeding  
             modelBuilder.Entity<Account>().HasData(new { ADMIN_ID=7,USERNAME = "ducanhdeptraivodichvutru", PASSWD = "123", MARK = 0 });
+            modelBuilder.Entity<Account>().HasData(new { ADMIN_ID = 8, USERNAME = "ducanh@gmail.com", PASSWD = "123456!", MARK = 0 });
             modelBuilder.Entity<Category>().HasData(new { CATE_ID=1,CATE_NAME = "Món rau", CATE_IMG = "https://ibb.co/XF73tQf", CATE_DESCRIPTION= "Gồm nhiều chất xơ và vitamin hỗ trợ giảm cân" });
             modelBuilder.Entity<Category>().HasData(new { CATE_ID = 2,CATE_NAME = "Trái cây", CATE_IMG = "https://ibb.co/Gc11tnM", CATE_DESCRIPTION = "Gồm nhiều vitamin và dưỡng chất" });
             modelBuilder.Entity<Discount_Code>().HasData(new { CODE_ID= "BLACKFRIDAY", CODE_NAME= "Thứ sáu đen tối", PERCENTS =50, MARK=1});
