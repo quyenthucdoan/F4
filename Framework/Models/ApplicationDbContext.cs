@@ -37,7 +37,7 @@ namespace Framework.Models
             modelBuilder.Entity<Discount_Code>().Property(u => u.PERCENTS).HasDefaultValue(0);
             modelBuilder.Entity<Orders>().Property(u => u.PAYMENT_TYPE).HasDefaultValue(1);
             modelBuilder.Entity<Orders>().Property(u => u.RECEIVED).HasDefaultValue(0);
-            modelBuilder.Entity<Orders>().Property(u => u.DELIVERED).HasDefaultValue(0);
+            modelBuilder.Entity<Orders>().Property(u => u.DELIVERED).HasDefaultValue(0); 
 
             //Data Seeding  
             modelBuilder.Entity<Account>().HasData(new { ADMIN_ID=7,USERNAME = "ducanhdeptraivodichvutru", PASSWD = "123", MARK = 0 });
@@ -56,7 +56,7 @@ namespace Framework.Models
             modelBuilder.Entity<Menu>().HasData(new { MENU_ID = 10,MENU_NAME = "Sinh tố bơ", MENU_SIZE = 3, MENU_PRICE = 35000.00d, CALORIES = 250.00f, MENU_IMG = "https://picsum.photos/200", MENU_DESCRIPTION = "3 bơ", CATE_ID = 4 });
 
 
-
+               
 
 
 
